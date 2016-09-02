@@ -18,6 +18,7 @@
 <html class="no-js" <?php language_attributes(); ?> <!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="author" content="此网站由 WordPress 智库( https://www.wpzhiku.com )定制开发，如遇问题或Bug，请联系 QQ: 470266798（一刀）解决，同时也欢迎新老客户咨询合作。">
 	<meta http-equiv="X-UA-Compatible" content="edge"/>
 	<meta name="renderer" content="webkit|ie-comp|ie-stand"/>
 	<meta name="referrer" content="always"/>
