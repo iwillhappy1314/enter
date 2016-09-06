@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-08-07 21:12+0800\n"
-"PO-Revision-Date: 2016-08-07 21:12+0800\n"
+"POT-Creation-Date: 2016-09-06 13:45+0800\n"
+"PO-Revision-Date: 2016-09-06 13:45+0800\n"
 "Last-Translator: Amos Lee <iwillhappy1314@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -20,24 +20,15 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: front\n"
 
-#: 404.php:21
+#: 404.php:14
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "抱歉！此页面不存在。"
 
-#: 404.php:25
+#: 404.php:27
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr "这里好像什么都没有，试试搜索功能吧"
-
-#: 404.php:37
-msgid "Most Used Categories"
-msgstr "常用分类"
-
-#: 404.php:54
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "尝试在月份存档中查找：%1$s"
 
 #: comments.php:31
 #, php-format
@@ -76,25 +67,29 @@ msgstr "网址"
 msgid "Comment Content"
 msgstr "评论内容"
 
-#: functions.php:48
+#: functions.php:49
 msgid "Primary"
 msgstr "主菜单"
 
-#: functions.php:49
+#: functions.php:50
 msgid "Footer"
 msgstr "页脚"
 
-#: functions.php:104
+#: functions.php:109
 msgid "Sidebar"
 msgstr "侧边栏"
 
-#: functions.php:106
+#: functions.php:111
 msgid "Add widgets here."
 msgstr "在这里添加小工具。"
 
 #: inc/extras.php:108
 msgid "Thumbnail"
 msgstr "缩略图"
+
+#: inc/settings.php:19 inc/settings.php:20
+msgid "主题设置"
+msgstr ""
 
 #: inc/template-tags.php:38 inc/template-tags.php:43
 msgid ", "
@@ -115,12 +110,7 @@ msgstr "标签 %1$s"
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "<span class=\"screen-reader-text\">在 %s </span>留下评论"
 
-#: inc/template-tags.php:55 wizhi/content-page.php:33
-#, php-format
-msgid "Edit %s"
-msgstr "编辑 %s"
-
-#: search.php:22
+#: search.php:19
 #, php-format
 msgid "Search Results for: %s"
 msgstr "搜索结果： \"%s\""
@@ -133,33 +123,38 @@ msgstr "搜索结果： \"%s\""
 msgid "Search"
 msgstr "搜索"
 
-#: wizhi/content-none.php:14
+#: wizhi/content-none.php:3
 msgid "Nothing Found"
 msgstr "没有内容"
 
-#: wizhi/content-none.php:21
+#: wizhi/content-none.php:10
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "准备好发表第一篇文章了吗？<a href=\"%1$s\">点击这里开始</a>。"
 
-#: wizhi/content-none.php:25
+#: wizhi/content-none.php:14
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr "非常抱歉，没有符合您需要的搜索内容。请换其它关键词试下吧。"
 
-#: wizhi/content-none.php:31
+#: wizhi/content-none.php:20
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr "看来我们不能找到你要找的东西。请搜索一下试试吧。"
 
-#: wizhi/content-page.php:23 wizhi/content.php:33
+#: wizhi/content-page.php:12 wizhi/content.php:22
 msgid "Pages:"
 msgstr "页面："
 
-#: wizhi/content.php:28
+#: wizhi/content-page.php:22
+#, php-format
+msgid "Edit %s"
+msgstr "编辑 %s"
+
+#: wizhi/content.php:17
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "继续阅读： %s <span class=\"meta-nav\">&rarr;</span>"
@@ -175,6 +170,12 @@ msgstr "1 条评论"
 #: wizhi/part/post-entry-meta.php:17
 msgid "% Comments"
 msgstr "% 条评论"
+
+#~ msgid "Most Used Categories"
+#~ msgstr "常用分类"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "尝试在月份存档中查找：%1$s"
 
 #~ msgid "Comment"
 #~ msgstr "评论"
