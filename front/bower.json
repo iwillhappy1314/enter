@@ -15,7 +15,8 @@
     "fancybox": "^2.1.5",
     "equalize": "^1.0.2",
     "jquery-fullheight": "^1.0.8",
-    "isMobile": "ismobilejs#^0.4.1"
+    "isMobile": "ismobilejs#^0.4.1",
+    "scrollbox": "^2.4.0"
   },
   "overrides": {
     "modernizr": {
