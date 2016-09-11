@@ -145,3 +145,24 @@ function wizhi_remove_script_version( $src ) {
 
 	return $parts[ 0 ];
 }
+
+
+/**
+ *  添加设置中的脚本到 wp_head()
+ */
+add_action( 'wp_head', 'enter_head_script' );
+function enter_head_script() { 
+	global $options;
+	$before_head = $options["before_head"];
+	echo $before_head;
+}
+
+/**
+ *  添加设置中的脚本到 wp_footer()
+ */
+add_action( 'wp_footer', 'enter_body_script' );
+function enter_body_script() { 
+	global $options;;
+	$before_body = $options["before_body"];
+	echo $before_body;
+}
