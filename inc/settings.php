@@ -15,9 +15,12 @@ function wizhi_enter_settings() {
 			'name'     => 'wizhi_enter_settings',
 			'tabbed'   => 'horizontal',
 			'serialize_data' => false,
+			'add_to_prefix'  => false,
 			'children' => [
 				'site' => new Fieldmanager_Group( [
 					'label'    => __( 'Site Information', 'enter' ),
+					'serialize_data' => false,
+					'add_to_prefix'  => false,
 					'children' => [
 						"favicon" => new Fieldmanager_Media( __( 'Favicon', 'enter' ) ),
 						"logo"    => new Fieldmanager_Media( __( 'Site Logo', 'enter' ) ),
@@ -26,6 +29,8 @@ function wizhi_enter_settings() {
 				] ),
 				'code' => new Fieldmanager_Group( [
 					'label'    => __( 'Code Settings', 'enter' ),
+					'serialize_data' => false,
+					'add_to_prefix'  => false,
 					'children' => [
 						"before_head" => new Fieldmanager_TextArea( __( 'Code before </head>', 'enter' ) ),
 						"before_body" => new Fieldmanager_TextArea( __( 'Code before </body>', 'enter' ) ),
