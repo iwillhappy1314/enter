@@ -33,8 +33,8 @@
 				Copyright ©<?= date( 'Y' ); ?> <a href="<?= home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
 				
 				<?php global $options; ?>
-				<?php if($options['beian']) : ?>
-					<a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/"><?= $options['beian']; ?></a>
+				<?php if($options['site']['beian']) : ?>
+					<a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/"><?= $options['site']['beian']; ?></a>
 				<?php endif;?>
 			</div>
 		</div>

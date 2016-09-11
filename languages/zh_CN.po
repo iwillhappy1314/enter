@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-09-11 08:58+0800\n"
-"PO-Revision-Date: 2016-09-11 08:58+0800\n"
+"POT-Creation-Date: 2016-09-11 09:43+0800\n"
+"PO-Revision-Date: 2016-09-11 09:43+0800\n"
 "Last-Translator: Amos Lee <iwillhappy1314@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -91,17 +91,33 @@ msgstr "缩略图"
 msgid "Theme Options"
 msgstr "主题选项"
 
-#: inc/settings.php:17
+#: inc/settings.php:20
+msgid "Site Information"
+msgstr "站点信息"
+
+#: inc/settings.php:22
 msgid "Favicon"
 msgstr "收藏夹图标 Favicon"
 
-#: inc/settings.php:18
+#: inc/settings.php:23
 msgid "Site Logo"
 msgstr "网站 Logo"
 
-#: inc/settings.php:19
+#: inc/settings.php:24
 msgid "Beian Number"
 msgstr "备案号"
+
+#: inc/settings.php:28
+msgid "Code Settings"
+msgstr "代码设置"
+
+#: inc/settings.php:30
+msgid "Code before </head>"
+msgstr "</head> 前代码"
+
+#: inc/settings.php:31
+msgid "Code before </body>"
+msgstr "</body> 前代码"
 
 #: inc/template-tags.php:38 inc/template-tags.php:43
 msgid ", "

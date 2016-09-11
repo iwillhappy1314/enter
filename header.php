@@ -26,8 +26,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php global $options; ?>
-	<?php if($options['favicon']) : ?>
-		<link rel="shortcut icon" href="<?= wp_get_attachment_url($options['favicon']); ?>" type="image/png" />
+	<?php if($options['site']['favicon']) : ?>
+		<link rel="shortcut icon" href="<?= wp_get_attachment_url($options['site']['favicon']); ?>" type="image/png" />
 	<?php endif; ?>
 	<?php wp_head(); ?>
 </head>
@@ -45,8 +45,8 @@
 						<div class="site-branding pure-center-md">
 							<h1 class="site-title">
 								<?php global $options; ?>
-								<?php if($options['logo']) : ?>
-									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?= wp_get_attachment_url($options['logo']); ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
+								<?php if($options['site']['logo']) : ?>
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?= wp_get_attachment_url($options['site']['logo']); ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
 								<?php else: ?>
 									<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 								<?php endif; ?>

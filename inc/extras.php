@@ -153,7 +153,7 @@ function wizhi_remove_script_version( $src ) {
 add_action( 'wp_head', 'enter_head_script' );
 function enter_head_script() { 
 	global $options;
-	$before_head = $options["before_head"];
+	$before_head = $options['code']["before_head"];
 	echo $before_head;
 }
 
@@ -163,6 +163,6 @@ function enter_head_script() {
 add_action( 'wp_footer', 'enter_body_script' );
 function enter_body_script() { 
 	global $options;;
-	$before_body = $options["before_body"];
+	$before_body = $options['code']['before_body'];
 	echo $before_body;
 }
