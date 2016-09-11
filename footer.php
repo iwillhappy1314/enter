@@ -17,7 +17,7 @@
 
 	<div class="pure-g wrap">
 
-		<div class="pure-u-3-4">
+		<div class="pure-u-1 pure-u-md-2-3">
 			<nav id="footer-navigation" class="clearfix footer-navigation" role="navigation">
 				<?php wp_nav_menu( [
 					'theme_location' => 'footer',
@@ -26,10 +26,16 @@
 				] ); ?>
 			</nav>
 		</div>
+		
 
-		<div class="pure-u-1-4">
+		<div class="pure-u-1 pure-u-md-1-3">
 			<div class="text-right site-info pure-center-md">
 				Copyright ©<?= date( 'Y' ); ?> <a href="<?= home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
+				
+				<?php global $options; ?>
+				<?php if($options['beian']) : ?>
+					<a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/"><?= $options['beian']; ?></a>
+				<?php endif;?>
 			</div>
 		</div>
 

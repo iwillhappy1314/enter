@@ -138,6 +138,9 @@ function wizhi_enter_scripts() {
 add_action( 'wp_enqueue_scripts', 'wizhi_enter_scripts' );
 
 
+$options = get_option('wizhi_enter_settings'); 
+
+
 /**
  * 实现自定义头部功能
  */

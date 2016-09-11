@@ -25,8 +25,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<link rel="shortcut icon" href="<?php bloginfo( 'template_url' ); ?>/front/dist/images/favicon.png" type="image/png" />
-
+	<?php global $options; ?>
+	<?php if($options['favicon']) : ?>
+		<link rel="shortcut icon" href="<?= wp_get_attachment_url($options['favicon']); ?>" type="image/png" />
+	<?php endif; ?>
 	<?php wp_head(); ?>
 </head>
 
@@ -42,9 +44,9 @@
 					<div class="col">
 						<div class="site-branding pure-center-md">
 							<h1 class="site-title">
-								<?php $logo = get_option('site_logo'); ?>
-								<?php if($logo) : ?>
-									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?= $logo; ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
+								<?php global $options; ?>
+								<?php if($options['logo']) : ?>
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?= wp_get_attachment_url($options['logo']); ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
 								<?php else: ?>
 									<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 								<?php endif; ?>
