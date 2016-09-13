@@ -16,7 +16,8 @@
     "equalize": "^1.0.2",
     "jquery-fullheight": "^1.0.8",
     "isMobile": "ismobilejs#^0.4.1",
-    "scrollbox": "^2.4.0"
+    "scrollbox": "^2.4.0",
+    "bxslider-4": "^4.2.5"
   },
   "overrides": {
     "modernizr": {
@@ -30,6 +31,9 @@
     },
     "fancybox": {
       "main": "./source/jquery.fancybox.js"
+    },
+    "bxslider-4": {
+      "main": "./dist/jquery.bxslider.js"
     }
   }
 }
