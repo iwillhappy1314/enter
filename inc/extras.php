@@ -166,3 +166,13 @@ function enter_body_script() {
 	$before_body = $options['code']['before_body'];
 	echo $before_body;
 }
+
+
+// 移除存档文字
+add_filter(  'gettext',  'enter_remove_archive_text'  );
+add_filter(  'ngettext',  'enter_remove_archive_text'  );
+
+function enter_remove_archive_text( $translated ) {
+	$translated = str_ireplace( '存档：',  '',  $translated );
+	return $translated;
+}
