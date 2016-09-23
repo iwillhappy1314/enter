@@ -73,6 +73,12 @@ function enter_setup() {
 		'link',
 	) );
 
+
+	/**
+     * 支持 WooCommerce
+     */
+	add_theme_support( 'woocommerce' );
+
     /**
      * 添加编辑器样式
      */
