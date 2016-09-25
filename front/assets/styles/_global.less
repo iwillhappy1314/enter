@@ -352,11 +352,12 @@ a {
 * = 媒体查询, 注意 min 和 max 的区别, 注意屏幕宽度区别
 * ----------------------------------------------------------- */
 
+// > 568
 @media screen and (min-width: 35.5em) {
 
 }
 
-// 只在桌面端显示
+// 只在桌面端显示 > 768
 @media screen and (min-width: 48em) {
     .site {
         position: relative;
@@ -364,13 +365,14 @@ a {
     }
 }
 
-// 只在移动端显示
+// 只在移动端显示 < 768
 @media screen and (max-width: 48em) {
     .site-header {
         padding: 0;
     }
 }
 
+// > 1024
 @media screen and (min-width: 64em) {
 
 }
