@@ -10,8 +10,6 @@
     "modernizr": "2.8.2",
     "html5shiv": "^3.7.3",
     "imagesloaded": "^4.1.0",
-    "masonry": "^4.1.0",
-    "isotope": "^3.0.1",
     "fancybox": "^2.1.5",
     "equalize": "^1.0.2",
     "jquery-fullheight": "^1.0.8",
@@ -22,12 +20,6 @@
   "overrides": {
     "modernizr": {
       "main": "./modernizr.js"
-    },
-    "masonry": {
-      "main": "./dist/masonry.pkgd.js"
-    },
-    "isotope": {
-      "main": "./dist/isotope.pkgd.js"
     },
     "fancybox": {
       "main": "./source/jquery.fancybox.js"

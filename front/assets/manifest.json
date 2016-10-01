@@ -45,10 +45,14 @@
       "bower": ["imagesloaded"]
     },
     "masonry.js": {
-      "bower": ["masonry"]
+      "files": [
+        "scripts/plugins/masonry.pkgd.min.js"
+      ]
     },
     "isotope.js": {
-      "bower": ["isotope"]
+      "files": [
+        "scripts/plugins/isotope.pkgd.min.js"
+      ]
     },
     "fancybox.js": {
       "bower": ["fancybox"]
