@@ -8,7 +8,7 @@
  */
 
 
-add_action( 'fm_post_post', function() {
+add_action( 'after_setup_theme', function() {
     $fm = new Fieldmanager_Group( array(
         'name' => 'demo-group',
         'serialize_data' => false,

@@ -8,8 +8,7 @@
  */
 
 $object = get_queried_object();
-
-$template = get_option( $object->name . '_archive_template' );
+$template = get_archive_option($object->name)['template'];
 
 if ( ! empty( $template ) ) {
 	get_template_part( 'wizhi/archive/archive', $template );

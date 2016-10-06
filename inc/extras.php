@@ -120,19 +120,21 @@ function wizhi_get_thumb_show( $column_name ) {
 	}
 }
 
-
 /**
  * 评论作者链接新窗口打开
  */
 add_filter( 'get_comment_author_link', 'wizhi_get_comment_author_link' );
-function wizhi_get_comment_author_link() {
-	$url    = get_comment_author_url( $comment_ID );
-	$author = get_comment_author( $comment_ID );
+function wizhi_get_comment_author_link( $comment_ID ) {
+	$comment = get_comment( $comment_ID );
+	$url     = get_comment_author_url( $comment );
+	$author  = get_comment_author( $comment );
+
 	if ( empty( $url ) || 'http://' == $url ) {
 		return $author;
 	} else {
 		return "<a target='_blank' href='$url' rel='external nofollow' class='url'>$author</a>";
 	}
+
 }
 
 /**
