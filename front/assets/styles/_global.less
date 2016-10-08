@@ -2,6 +2,20 @@
 * = 样式重置, 包括重置标签样式和框架通用类样式
 * ----------------------------------------------------------- */
 
+.sprite-bg(@sprite, @display:block) {
+    .sprite-position(@sprite);
+    background-repeat: no-repeat;
+}
+
+.font(@content){
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: @content;
+}
+
 /* --------------------------------------------------------------
 * = 通用样式, 设置网站全局通用样式
 * ----------------------------------------------------------- */
