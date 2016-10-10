@@ -8,6 +8,21 @@
  */
 
 /**
+ * 添加文章排版优化 class 到文章内容
+ *
+ * @param $classes
+ *
+ * @return array
+ */
+function enter_editer_class( $classes ) {
+	$classes[] = 'typo';
+
+	return $classes;
+}
+
+add_filter( 'post_class', 'enter_editer_class' );
+
+/**
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
