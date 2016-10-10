@@ -22,6 +22,17 @@ function enter_editer_class( $classes ) {
 
 add_filter( 'post_class', 'enter_editer_class' );
 
+
+/**
+ * 添加 CSS 到编辑器 body
+ */
+function enter_tiny_mce_before_init( $init_array ) {
+	$init_array['body_class'] = 'typo hentry entry-content';
+	return $init_array;
+}
+add_filter('tiny_mce_before_init', 'enter_tiny_mce_before_init');
+
+
 /**
  * Adds custom classes to the array of body classes.
  *
