@@ -30,26 +30,23 @@ get_header(); ?>
 			<div id="primary" class="pure-u-1">
 				<main id="main" class="col site-main" role="main">
 
-					<?php
-					if ( have_posts() ) : ?>
+					<?php if ( have_posts() ) : ?>
 
-						<div class="pure-g row masonry">
-							<?php
-							while ( have_posts() ) : the_post();
-								get_template_part( 'wizhi/content', 'masonry' );
-							endwhile;
-							?>
-						</div>
+						<?php while ( have_posts() ) : the_post(); ?>
+							<?php get_template_part( 'wizhi/content', 'masonry' ); ?>
+						<?php endwhile; ?>
 
-						<?php if ( function_exists( 'wizhi_bootstrap_pagination' ) ):
+						<?php
+						if ( function_exists( 'wizhi_bootstrap_pagination' ) ):
 							wizhi_bootstrap_pagination();
 						endif;
+						?>
 
-					else :
+					<?php else : ?>
 
-						get_template_part( 'wizhi/content', 'none' );
+						<?php get_template_part( 'wizhi/content', 'none' ); ?>
 
-					endif; ?>
+					<?php endif; ?>
 
 				</main>
 			</div>

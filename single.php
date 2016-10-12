@@ -29,19 +29,19 @@ get_header(); ?>
 			<div id="primary" class="pure-u-1 pure-u-md-3-4 content-area">
 				<main id="main" class="col site-main" role="main">
 
-					<?php
-					while ( have_posts() ) : the_post();
+					<?php while ( have_posts() ) : the_post(); ?>
 
-						get_template_part( 'wizhi/content', get_post_format() );
+						<?php get_template_part( 'wizhi/content', get_post_format() ); ?>
 
-						the_post_navigation();
+						<?php the_post_navigation(); ?>
 
+						<?php 
 						if ( comments_open() || get_comments_number() ) :
 							comments_template();
 						endif;
+						?>
 
-					endwhile;
-					?>
+					<?php endwhile; ?>
 
 				</main>
 			</div><!-- #primary -->
