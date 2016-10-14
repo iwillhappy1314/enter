@@ -3,6 +3,7 @@
     "main.js": {
       "files": [
         "scripts/plugins/*.coffee",
+        "scripts/modules/*.js",
         "scripts/main.js",
         "scripts/main.coffee"
       ],
