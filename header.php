@@ -51,7 +51,13 @@
 									<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 								<?php endif; ?>
 							</h1>
-						</div><!-- .site-branding -->
+						</div>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-navigation">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
 					</div>
 				</div>
 
