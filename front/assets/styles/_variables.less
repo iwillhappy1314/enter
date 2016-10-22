@@ -1,6 +1,36 @@
 /* --------------------------------------------------------------
-* = 配色
-* ----------------------------------------------------------- */
+ * = 全局颜色
+ * ----------------------------------------------------------- */
+
+// 网站宽度
+@width: 1100px;
+@width-rem: 110rem;
+@body-background: #fff;
+
+// 网站配色
+@highlight: #333;
+
+// 文字颜色
+@text-dark: #000;
+@text-color: #333;
+@text-light: #666;
+@text-lighter: #aaa;
+
+// 背景和边框
+@background: #e7e7e7;
+
+@border-color: #eee;
+@border-color-darker: #ccc;
+
+// 媒体间距
+@padding: 15px;
+@padding-md: 8px;
+@padding-lg: 30px;
+@padding-xl: 50px;
+
+/* --------------------------------------------------------------
+ * = 配色
+ * ----------------------------------------------------------- */
 @gray-base: #000;
 @gray-darker: lighten(@gray-base, 13.5%); // #222
 @gray-dark: lighten(@gray-base, 20%); // #333
@@ -8,43 +38,44 @@
 @gray-light: lighten(@gray-base, 46.7%); // #777
 @gray-lighter: lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary: #0081cc; // #337ab7
+@brand-primary: #4285f4; // #337ab7
 @brand-success: #5cb85c;
 @brand-info: #5bc0de;
 @brand-warning: #f0ad4e;
 @brand-danger: #d9534f;
 
-
 /* --------------------------------------------------------------
-* = 全局样式
-* ----------------------------------------------------------- */
-//** Background color for `<body>`.
+ * = 全局样式
+ * ----------------------------------------------------------- */
+// `<body>` 背景颜色.
 @body-bg: #fff;
-//** Global text color on `<body>`.
+// `<body>` 上的字体颜色.
 @text-color: @gray-dark;
 
-//** Global textual link color.
+// 全局链接颜色
 @link-color: @brand-primary;
-//** Link hover color set via `darken()` function.
+// 全局鼠标经过链接颜色
 @link-hover-color: darken(@link-color, 15%);
-//** Link hover decoration.
+// 鼠标经过装饰
 @link-hover-decoration: none;
 
 /* --------------------------------------------------------------
-* = 排版
-* ----------------------------------------------------------- */
-//## Font, line-height, and color for body text, headings, and more.
-
-@font-family-sans-serif: PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;
+ * = 排版
+ * ----------------------------------------------------------- */
+//## 全局默认字体排版
+@font-family-sans-serif: PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
 @font-family-serif: Palatino, Optima, Georgia, "Times New Roman", Times, serif;
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-@font-family-monospace: Courier, Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// `<code>`, `<kbd>`, 和 `<pre>` 等元素的默认字体.
+@font-family-monospace: Monaco, Consolas, "Courier New", monospace;
 @font-family-base: @font-family-sans-serif;
 
+// 基本字号
 @font-size-base: 14px;
 @font-size-large: ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small: ceil((@font-size-base * 0.85)); // ~12px
 
+// 标题字号
 @font-size-h1: floor((@font-size-base * 2.6)); // ~36px
 @font-size-h2: floor((@font-size-base * 2.15)); // ~30px
 @font-size-h3: ceil((@font-size-base * 1.7)); // ~24px
@@ -52,212 +83,221 @@
 @font-size-h5: @font-size-base;
 @font-size-h6: ceil((@font-size-base * 0.85)); // ~12px
 
-//** Unit-less `line-height` for use in components like buttons.
+// 按钮等元素上的倍数行高 `line-height`
 @line-height-base: 1.428571429; // 20/14
-//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+// 计算出实际的像素行高值 "line-height" (`font-size` * `line-height`) 以方便 `margin`, `padding` 使用
 @line-height-computed: floor((@font-size-base * @line-height-base)); // ~20px
 
-//** By default, this inherits from the `<body>`.
+// 标题字体属性, 默认情况下, 从 `<body>` 继承.
 @headings-font-family: inherit;
 @headings-font-weight: 500;
 @headings-line-height: 1.1;
 @headings-color: inherit;
 
 /* --------------------------------------------------------------
-* = 字体
-* ----------------------------------------------------------- */
-//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
-
-//** Load fonts from this directory.
+ * = 字体图标
+ * ----------------------------------------------------------- */
+// 从目录加载
 @icon-font-path: "../fonts/";
-//** File name for all font files.
+// 所有字体的文件名称
 @icon-font-name: "glyphicons-halflings-regular";
-//** Element ID within SVG icon file.
+// SVG 图标文件的元素 ID
 @icon-font-svg-id: "glyphicons_halflingsregular";
 
-
 /* --------------------------------------------------------------
-* = 间距
-* ----------------------------------------------------------- */
+ * = 间距
+ * ----------------------------------------------------------- */
+
+// 内间距
 @padding-base-vertical: 6px;
 @padding-base-horizontal: 12px;
 
+// 大尺寸内间距
 @padding-large-vertical: 10px;
 @padding-large-horizontal: 16px;
 
+// 小尺寸内间距
 @padding-small-vertical: 5px;
 @padding-small-horizontal: 10px;
 
 @padding-xs-vertical: 1px;
 @padding-xs-horizontal: 5px;
 
-@line-height-large: 1.3333333; // extra decimals for Win 8.1 Chrome
+// 行高
+@line-height-large: 1.3333333;
 @line-height-small: 1.5;
 
+// 圆角的半径
 @border-radius-base: 4px;
 @border-radius-large: 6px;
 @border-radius-small: 3px;
 
-//** Global color for active items (e.g., navs or dropdowns).
+// 当前项目的全局字体颜色 (e.g., navs or dropdowns).
 @component-active-color: #fff;
-//** Global background color for active items (e.g., navs or dropdowns).
+
+// 当前项目的全局背景颜色 (e.g., navs or dropdowns).
 @component-active-bg: @brand-primary;
 
-//** Width of the `border` for generating carets that indicator dropdowns.
+// 下拉指示小三角的宽度
 @caret-width-base: 4px;
-//** Carets increase slightly in size for larger components.
+
+// 大号下拉指示小三角的宽度
 @caret-width-large: 5px;
 
 /* --------------------------------------------------------------
-* = 表格
-* ----------------------------------------------------------- */
-//## Customizes the `.table` component with basic values, each used across all table variations.
-
-//** Padding for `<th>`s and `<td>`s.
+ * = 表格
+ * ----------------------------------------------------------- */
+// <th> 和 <td> 的内间距.
 @table-cell-padding: 8px;
-//** Padding for cells in `.table-condensed`.
+// 紧凑表格 `.table-condensed` 的<th> 和 <td>内间距.
 @table-condensed-cell-padding: 5px;
 
-//** Default background color used for all tables.
+// 所有表格的默认背景颜色
 @table-bg: transparent;
-//** Background color used for `.table-striped`.
+
+// 条纹表格的背景颜色
 @table-bg-accent: #f9f9f9;
-//** Background color used for `.table-hover`.
+
+// 鼠标经过效果表格的背景颜色 `.table-hover`.
 @table-bg-hover: #f5f5f5;
 @table-bg-active: @table-bg-hover;
 
-//** Border color for table and cell borders.
+// 有边框表格的边框颜色
 @table-border-color: #ddd;
 
 /* --------------------------------------------------------------
-* = 按钮
-* ----------------------------------------------------------- */
-//## For each of Bootstrap's buttons, define text, background and border color.
-
+ * = 按钮
+ * ----------------------------------------------------------- */
 @btn-font-weight: normal;
 
+// 默认按钮
 @btn-default-color: #333;
 @btn-default-bg: #fff;
 @btn-default-border: #ccc;
 
+// 主按钮
 @btn-primary-color: #fff;
 @btn-primary-bg: @brand-primary;
 @btn-primary-border: darken(@btn-primary-bg, 5%);
 
+// 成功按钮 绿色
 @btn-success-color: #fff;
 @btn-success-bg: @brand-success;
 @btn-success-border: darken(@btn-success-bg, 5%);
 
+// 信息按钮
 @btn-info-color: #fff;
 @btn-info-bg: @brand-info;
 @btn-info-border: darken(@btn-info-bg, 5%);
 
+// 警告按钮 黄色
 @btn-warning-color: #fff;
 @btn-warning-bg: @brand-warning;
 @btn-warning-border: darken(@btn-warning-bg, 5%);
 
+// 危险按钮 红色
 @btn-danger-color: #fff;
 @btn-danger-bg: @brand-danger;
 @btn-danger-border: darken(@btn-danger-bg, 5%);
 
+// 禁用按钮 灰色
 @btn-link-disabled-color: @gray-light;
 
-// Allows for customizing button radius independently from global border radius
+// 默认使用全局圆角, 可自定义
 @btn-border-radius-base: @border-radius-base;
 @btn-border-radius-large: @border-radius-large;
 @btn-border-radius-small: @border-radius-small;
 
 /* --------------------------------------------------------------
-* = 表单
-* ----------------------------------------------------------- */
-//** `<input>` background color
+ * = 表单
+ * ----------------------------------------------------------- */
+// `<input>` 表单背景颜色
 @input-bg: #fff;
-//** `<input disabled>` background color
+
+// `<input disabled>` 禁用表单背景颜色
 @input-bg-disabled: @gray-lighter;
 
-//** Text color for `<input>`s
+// `<input>` 表单文本颜色
 @input-color: @gray;
-//** `<input>` border color
+// `<input>` 表单边框颜色
 @input-border: #ccc;
 
-// TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
-//** Default `.form-control` border radius
-// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+// 默认 `.form-control` 圆角半径
+// 有些浏览器上, 此设置对于 `<select>` 表单无效
 @input-border-radius: @border-radius-base;
-//** Large `.form-control` border radius
+// 大号 `.form-control` 圆角半径
 @input-border-radius-large: @border-radius-large;
-//** Small `.form-control` border radius
+// 小号 `.form-control` 圆角半径
 @input-border-radius-small: @border-radius-small;
 
-//** Border color for inputs on focus
+// 聚焦时的表单边框颜色
 @input-border-focus: #66afe9;
 
-//** Placeholder text color
+// 占位符文本颜色
 @input-color-placeholder: #999;
 
-//** Default `.form-control` height
+// 默认 `.form-control` 行高
 @input-height-base: (@line-height-computed + (@padding-base-vertical * 2) + 2);
-//** Large `.form-control` height
+// 大号 `.form-control` 行高
 @input-height-large: (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
-//** Small `.form-control` height
+// 小号 `.form-control` 行高
 @input-height-small: (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
-//** `.form-group` margin
+// `.form-group` 间距
 @form-group-margin-bottom: 15px;
 
 @legend-color: @gray-dark;
 @legend-border-color: #e5e5e5;
 
-//** Background color for textual input addons
+// 表单附加字段的背景颜色
 @input-group-addon-bg: @gray-lighter;
-//** Border color for textual input addons
+// 表单附加元素的边框颜色
 @input-group-addon-border-color: @input-border;
 
-//** Disabled cursor for form controls and buttons.
+// 禁用时的鼠标样式
 @cursor-disabled: not-allowed;
 
 /* --------------------------------------------------------------
-* = 下拉
-* ----------------------------------------------------------- */
-//## Dropdown menu container and contents.
+ * = 下拉
+ * ----------------------------------------------------------- */
 
-//** Background for the dropdown menu.
+// 下拉的背景
 @dropdown-bg: #fff;
-//** Dropdown menu `border-color`.
+
+// 下拉的边框颜色 `border-color`.
 @dropdown-border: rgba(0, 0, 0, .15);
-//** Dropdown menu `border-color` **for IE8**.
+
+// 下拉边框颜色降级
 @dropdown-fallback-border: #ccc;
-//** Divider color for between dropdown items.
+
+// 下拉的分隔线颜色
 @dropdown-divider-bg: #e5e5e5;
 
-//** Dropdown link text color.
+// 下拉的链接颜色
 @dropdown-link-color: @gray-dark;
-//** Hover color for dropdown links.
+
+// 下拉的鼠标经过链接颜色
 @dropdown-link-hover-color: darken(@gray-dark, 5%);
-//** Hover background for dropdown links.
+
+// 下拉的鼠标经过背景颜色
 @dropdown-link-hover-bg: #f5f5f5;
 
-//** Active dropdown menu item text color.
+// 当前下拉项的文字颜色
 @dropdown-link-active-color: @component-active-color;
-//** Active dropdown menu item background color.
+
+// 当前下拉项的背景颜色
 @dropdown-link-active-bg: @component-active-bg;
 
-//** Disabled dropdown menu item background color.
+// 禁用下拉项的文字颜色
 @dropdown-link-disabled-color: @gray-light;
 
-//** Text color for headers within dropdown menus.
+// 下拉标题的文字颜色
 @dropdown-header-color: @gray-light;
 
-//** Deprecated `@dropdown-caret-color` as of v3.1.0
-@dropdown-caret-color: #000;
-
 /* --------------------------------------------------------------
-* = z-index
-* ----------------------------------------------------------- */
-// Warning: Avoid customizing these values. They're used for a bird's eye view
-// of components dependent on the z-axis and are designed to all work together.
-//
-// Note: These variables are not generated into the Customizer.
+ * = z-index
+ * ----------------------------------------------------------- */
+// z 轴坐标值, 避免修改
 
 @zindex-navbar: 1000;
 @zindex-dropdown: 1000;
@@ -268,37 +308,36 @@
 @zindex-modal: 1050;
 
 /* --------------------------------------------------------------
-* = 设备断点
-* ----------------------------------------------------------- */
-//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+ * = 设备断点
+ * ----------------------------------------------------------- */
 
-// Extra small screen / phone
-//** Deprecated `@screen-xs` as of v3.0.1
+// 超小设备
+// Deprecated `@screen-xs` as of v3.0.1
 @screen-xs: 480px;
-//** Deprecated `@screen-xs-min` as of v3.2.0
+// Deprecated `@screen-xs-min` as of v3.2.0
 @screen-xs-min: @screen-xs;
-//** Deprecated `@screen-phone` as of v3.0.1
+// Deprecated `@screen-phone` as of v3.0.1
 @screen-phone: @screen-xs-min;
 
-// Small screen / tablet
-//** Deprecated `@screen-sm` as of v3.0.1
+// 小设备 / 平板
+// Deprecated `@screen-sm` as of v3.0.1
 @screen-sm: 768px;
 @screen-sm-min: @screen-sm;
-//** Deprecated `@screen-tablet` as of v3.0.1
+// Deprecated `@screen-tablet` as of v3.0.1
 @screen-tablet: @screen-sm-min;
 
-// Medium screen / desktop
-//** Deprecated `@screen-md` as of v3.0.1
+// 中号设备 / 笔记本
+// Deprecated `@screen-md` as of v3.0.1
 @screen-md: 992px;
 @screen-md-min: @screen-md;
-//** Deprecated `@screen-desktop` as of v3.0.1
+// Deprecated `@screen-desktop` as of v3.0.1
 @screen-desktop: @screen-md-min;
 
-// Large screen / wide desktop
-//** Deprecated `@screen-lg` as of v3.0.1
+// 大号设备 / 台式机
+// Deprecated `@screen-lg` as of v3.0.1
 @screen-lg: 1200px;
 @screen-lg-min: @screen-lg;
-//** Deprecated `@screen-lg-desktop` as of v3.0.1
+// Deprecated `@screen-lg-desktop` as of v3.0.1
 @screen-lg-desktop: @screen-lg-min;
 
 // So media queries don't overlap when required, provide a maximum
@@ -307,43 +346,41 @@
 @screen-md-max: (@screen-lg-min - 1);
 
 /* --------------------------------------------------------------
-* = 栅格系统
-* ----------------------------------------------------------- */
-//## Define your custom responsive grid.
+ * = 栅格系统
+ * ----------------------------------------------------------- */
 
-//** Number of columns in the grid.
+// 栅格系统数量
 @grid-columns: 12;
-//** Padding between columns. Gets divided in half for the left and right.
+
+// 栅格系统的间距, 左右各一般
 @grid-gutter-width: 30px;
-// Navbar collapse
-//** Point at which the navbar becomes uncollapsed.
+
+// 导航条折叠, 什么设备上不折叠
 @grid-float-breakpoint: @screen-sm-min;
-//** Point at which the navbar begins collapsing.
+
+// 什么设备上开始折叠
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 
 /* --------------------------------------------------------------
-* = 容器
-* ----------------------------------------------------------- */
-//## Define the maximum width of `.container` for different screen sizes.
+ * = 容器
+ * ----------------------------------------------------------- */
+//## 为不同尺寸的设备定义 `.container` 的最大宽度
 
-// Small screen / tablet
+// 小屏幕 / 平板
 @container-tablet: (720px + @grid-gutter-width);
-//** For `@screen-sm-min` and up.
 @container-sm: @container-tablet;
 
-// Medium screen / desktop
+// 中等尺寸屏幕 / 笔记本
 @container-desktop: (940px + @grid-gutter-width);
-//** For `@screen-md-min` and up.
 @container-md: @container-desktop;
 
-// Large screen / wide desktop
+// 大尺寸屏幕 / 台式机
 @container-large-desktop: (1140px + @grid-gutter-width);
-//** For `@screen-lg-min` and up.
 @container-lg: @container-large-desktop;
 
 /* --------------------------------------------------------------
-* = 导航条
-* ----------------------------------------------------------- */
+ * = 导航条
+ * ----------------------------------------------------------- */
 // 基础
 @navbar-height: 50px;
 @navbar-margin-bottom: @line-height-computed;
@@ -375,10 +412,9 @@
 @navbar-default-toggle-icon-bar-bg: #888;
 @navbar-default-toggle-border-color: #ddd;
 
-
 /* --------------------------------------------------------------
-* = 反色导航条
-* ----------------------------------------------------------- */
+ * = 反色导航条
+ * ----------------------------------------------------------- */
 
 // 基础
 @navbar-inverse-color: lighten(@gray-light, 15%);
@@ -405,8 +441,8 @@
 @navbar-inverse-toggle-border-color: #333;
 
 /* --------------------------------------------------------------
-* = 导航
-* ----------------------------------------------------------- */
+ * = 导航
+ * ----------------------------------------------------------- */
 
 // 通用
 @nav-link-padding: 10px 15px;
@@ -432,10 +468,9 @@
 @nav-pills-active-link-hover-bg: @component-active-bg;
 @nav-pills-active-link-hover-color: @component-active-color;
 
-
 /* --------------------------------------------------------------
-* = 分页
-* ----------------------------------------------------------- */
+ * = 分页
+ * ----------------------------------------------------------- */
 @pagination-color: @link-color;
 @pagination-bg: #fff;
 @pagination-border: #ddd;
@@ -453,8 +488,8 @@
 @pagination-disabled-border: #ddd;
 
 /* --------------------------------------------------------------
-* = 数字分页
-* ----------------------------------------------------------- */
+ * = 数字分页
+ * ----------------------------------------------------------- */
 @pager-bg: @pagination-bg;
 @pager-border: @pagination-border;
 @pager-border-radius: 15px;
@@ -467,8 +502,8 @@
 @pager-disabled-color: @pagination-disabled-color;
 
 /* --------------------------------------------------------------
-* = 跳转按钮
-* ----------------------------------------------------------- */
+ * = 跳转按钮
+ * ----------------------------------------------------------- */
 @jumbotron-padding: 30px;
 @jumbotron-color: inherit;
 @jumbotron-bg: @gray-lighter;
@@ -476,10 +511,9 @@
 @jumbotron-font-size: ceil((@font-size-base * 1.5));
 @jumbotron-heading-font-size: ceil((@font-size-base * 4.5));
 
-
 /* --------------------------------------------------------------
-* = 表单状态和提醒
-* ----------------------------------------------------------- */
+ * = 表单状态和提醒
+ * ----------------------------------------------------------- */
 @state-success-text: #3c763d;
 @state-success-bg: #dff0d8;
 @state-success-border: darken(spin(@state-success-bg, -10), 5%);
@@ -496,110 +530,113 @@
 @state-danger-bg: #f2dede;
 @state-danger-border: darken(spin(@state-danger-bg, -10), 5%);
 
-
 /* --------------------------------------------------------------
-* = 工具提示
-* ----------------------------------------------------------- */
-//** Tooltip max width
+ * = 工具提示
+ * ----------------------------------------------------------- */
+// 工具提示最大宽度
 @tooltip-max-width: 200px;
-//** Tooltip text color
+// 工具提示文字颜色
 @tooltip-color: #fff;
-//** Tooltip background color
+// 工具提示背景颜色
 @tooltip-bg: #000;
 @tooltip-opacity: .9;
 
-//** Tooltip arrow width
+// 工具提示箭头宽度
 @tooltip-arrow-width: 5px;
-//** Tooltip arrow color
+// 工具提示箭头颜色
 @tooltip-arrow-color: @tooltip-bg;
 
 /* --------------------------------------------------------------
-* = 浮动窗口
-* ----------------------------------------------------------- */
+ * = 浮动窗口
+ * ----------------------------------------------------------- */
 
-//** Popover body background color
+// 浮动窗口背景颜色
 @popover-bg: #fff;
-//** Popover maximum width
+
+// 浮动窗口最大宽度
 @popover-max-width: 276px;
-//** Popover border color
+
+// 浮动窗口边框颜色
 @popover-border-color: rgba(0, 0, 0, .2);
-//** Popover fallback border color
+
+// 浮动窗口边框颜色降级
 @popover-fallback-border-color: #ccc;
 
-//** Popover title background color
+// 浮动窗口标题背景颜色
 @popover-title-bg: darken(@popover-bg, 3%);
 
-//** Popover arrow width
+// 浮动窗口箭头宽度
 @popover-arrow-width: 10px;
-//** Popover arrow color
+
+// 浮动窗口箭头背景
 @popover-arrow-color: @popover-bg;
 
-//** Popover outer arrow width
+// 浮动窗口边框宽度
 @popover-arrow-outer-width: (@popover-arrow-width + 1);
-//** Popover outer arrow color
+
+// 浮动边框颜色
 @popover-arrow-outer-color: fadein(@popover-border-color, 5%);
-//** Popover outer arrow fallback color
+
+// 浮动窗口边框颜色降级
 @popover-arrow-outer-fallback-color: darken(@popover-fallback-border-color, 20%);
 
-
 /* --------------------------------------------------------------
-* = 标签
-* ----------------------------------------------------------- */
+ * = 标签
+ * ----------------------------------------------------------- */
 
-//** Default label background color
 @label-default-bg: @gray-light;
-//** Primary label background color
 @label-primary-bg: @brand-primary;
-//** Success label background color
 @label-success-bg: @brand-success;
-//** Info label background color
 @label-info-bg: @brand-info;
-//** Warning label background color
 @label-warning-bg: @brand-warning;
-//** Danger label background color
 @label-danger-bg: @brand-danger;
 
-//** Default label text color
+// 标签默认文字颜色
 @label-color: #fff;
-//** Default text color of a linked label
+
+// 标签默认鼠标经过文字颜色
 @label-link-hover-color: #fff;
 
-
 /* --------------------------------------------------------------
-* = 模态窗口
-* ----------------------------------------------------------- */
-//** Padding applied to the modal body
+ * = 模态窗口
+ * ----------------------------------------------------------- */
+// 模态窗口内间距
 @modal-inner-padding: 15px;
 
-//** Padding applied to the modal title
+// 模态窗口标题内间距
 @modal-title-padding: 15px;
-//** Modal title line-height
+
+// 模态窗口标题行高
 @modal-title-line-height: @line-height-base;
 
-//** Background color of modal content area
+// 模态窗口内容背景颜色
 @modal-content-bg: #fff;
-//** Modal content border color
+
+// 模态窗口内容边框
 @modal-content-border-color: rgba(0, 0, 0, .2);
-//** Modal content border color **for IE8**
+
+// 模态窗口内容边框降级
 @modal-content-fallback-border-color: #999;
 
-//** Modal backdrop background color
+// 模态窗口遮罩背景
 @modal-backdrop-bg: #000;
-//** Modal backdrop opacity
+
+// 模态窗口遮罩透明度
 @modal-backdrop-opacity: .5;
-//** Modal header border color
+
+// 模态窗口头部边框颜色
 @modal-header-border-color: #e5e5e5;
-//** Modal footer border color
+
+// 模态窗口底部边框颜色
 @modal-footer-border-color: @modal-header-border-color;
 
 @modal-lg: 900px;
 @modal-md: 600px;
 @modal-sm: 300px;
 
-
 /* --------------------------------------------------------------
-* = 提醒
-* ----------------------------------------------------------- */
+ * = 提醒
+ * ----------------------------------------------------------- */
 @alert-padding: 15px;
 @alert-border-radius: @border-radius-base;
 @alert-link-font-weight: bold;
@@ -620,67 +657,61 @@
 @alert-danger-text: @state-danger-text;
 @alert-danger-border: @state-danger-border;
 
-
 /* --------------------------------------------------------------
-* = 进度条
-* ----------------------------------------------------------- */
+ * = 进度条
+ * ----------------------------------------------------------- */
 
-//** Background color of the whole progress component
+// 整体进度条背景
 @progress-bg: #f5f5f5;
-//** Progress bar text color
+
+// 进度条文字颜色
 @progress-bar-color: #fff;
-//** Variable for setting rounded corners on progress bar.
+
+// 进度条圆角半径
 @progress-border-radius: @border-radius-base;
 
-//** Default progress bar color
 @progress-bar-bg: @brand-primary;
-//** Success progress bar color
 @progress-bar-success-bg: @brand-success;
-//** Warning progress bar color
 @progress-bar-warning-bg: @brand-warning;
-//** Danger progress bar color
 @progress-bar-danger-bg: @brand-danger;
-//** Info progress bar color
 @progress-bar-info-bg: @brand-info;
 
-
 /* --------------------------------------------------------------
-* = 列表组
-* ----------------------------------------------------------- */
+ * = 列表组
+ * ----------------------------------------------------------- */
 
-//** Background color on `.list-group-item`
+// Background color on `.list-group-item`
 @list-group-bg: #fff;
-//** `.list-group-item` border color
+// `.list-group-item` border color
 @list-group-border: #ddd;
-//** List group border radius
+// List group border radius
 @list-group-border-radius: @border-radius-base;
 
-//** Background color of single list items on hover
+// Background color of single list items on hover
 @list-group-hover-bg: #f5f5f5;
-//** Text color of active list items
+// Text color of active list items
 @list-group-active-color: @component-active-color;
-//** Background color of active list items
+// Background color of active list items
 @list-group-active-bg: @component-active-bg;
-//** Border color of active list elements
+// Border color of active list elements
 @list-group-active-border: @list-group-active-bg;
-//** Text color for content within active list items
+// Text color for content within active list items
 @list-group-active-text-color: lighten(@list-group-active-bg, 40%);
 
-//** Text color of disabled list items
+// Text color of disabled list items
 @list-group-disabled-color: @gray-light;
-//** Background color of disabled list items
+// Background color of disabled list items
 @list-group-disabled-bg: @gray-lighter;
-//** Text color for content within disabled list items
+// Text color for content within disabled list items
 @list-group-disabled-text-color: @list-group-disabled-color;
 
 @list-group-link-color: #555;
 @list-group-link-hover-color: @list-group-link-color;
 @list-group-link-heading-color: #333;
 
-
 /* --------------------------------------------------------------
-* = 面板
-* ----------------------------------------------------------- */
+ * = 面板
+ * ----------------------------------------------------------- */
 
 @panel-bg: #fff;
 @panel-body-padding: 15px;
@@ -688,7 +719,7 @@
 @panel-footer-padding: @panel-heading-padding;
 @panel-border-radius: @border-radius-base;
 
-//** Border color for elements within panels
+// Border color for elements within panels
 @panel-inner-border: #ddd;
 @panel-footer-bg: #f5f5f5;
 
@@ -716,71 +747,76 @@
 @panel-danger-border: @state-danger-border;
 @panel-danger-heading-bg: @state-danger-bg;
 
-
 /* --------------------------------------------------------------
-* = 缩略图
-* ----------------------------------------------------------- */
+ * = 缩略图
+ * ----------------------------------------------------------- */
 
-//** Padding around the thumbnail image
+// 缩略图内间距
 @thumbnail-padding: 4px;
-//** Thumbnail background color
+
+// 缩略图背景颜色
 @thumbnail-bg: @body-bg;
-//** Thumbnail border color
+
+// 缩略图边框颜色
 @thumbnail-border: #ddd;
-//** Thumbnail border radius
+
+// 缩略图圆角半径
 @thumbnail-border-radius: @border-radius-base;
 
-//** Custom text color for thumbnail captions
+// 缩略图说明字体颜色
 @thumbnail-caption-color: @text-color;
-//** Padding around the thumbnail caption
+
+// 缩略图说明间距
 @thumbnail-caption-padding: 9px;
 
-
 /* --------------------------------------------------------------
-* = Wells
-* ----------------------------------------------------------- */
+ * = Wells
+ * ----------------------------------------------------------- */
 
 @well-bg: #f5f5f5;
 @well-border: darken(@well-bg, 7%);
 
-
 /* --------------------------------------------------------------
-* = 徽章
-* ----------------------------------------------------------- */
+ * = 徽章
+ * ----------------------------------------------------------- */
 @badge-color: #fff;
-//** Linked badge text color on hover
+
+// 链接徽章的颜色和鼠标经过颜色
 @badge-link-hover-color: #fff;
 @badge-bg: @gray-light;
 
-//** Badge text color in active nav link
+// 当前导航链接上的徽章文字颜色
 @badge-active-color: @link-color;
-//** Badge background color in active nav link
+
+// 当前导航链接上的徽章背景颜色
 @badge-active-bg: #fff;
 
 @badge-font-weight: bold;
 @badge-line-height: 1;
 @badge-border-radius: 10px;
 
-
 /* --------------------------------------------------------------
-* = 面包屑
-* ----------------------------------------------------------- */
+ * = 面包屑
+ * ----------------------------------------------------------- */
 
 @breadcrumb-padding-vertical: 8px;
 @breadcrumb-padding-horizontal: 15px;
-//** Breadcrumb background color
+
+// 面包屑背景颜色
 @breadcrumb-bg: #f5f5f5;
-//** Breadcrumb text color
+
+// 面包屑文字颜色
 @breadcrumb-color: #ccc;
-//** Text color of current page in the breadcrumb
+
+// 面包屑当前项目颜色
 @breadcrumb-active-color: @gray-light;
-//** Textual separator for between breadcrumb elements
+
+// 面包屑分隔字符
 @breadcrumb-separator: "/";
 
-
 /* --------------------------------------------------------------
-* = 轮播
-* ----------------------------------------------------------- */
+ * = 轮播
+ * ----------------------------------------------------------- */
 
 @carousel-text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 
@@ -794,19 +830,17 @@
 
 @carousel-caption-color: #fff;
 
-
 /* --------------------------------------------------------------
-* = 关闭按钮
-* ----------------------------------------------------------- */
+ * = 关闭按钮
+ * ----------------------------------------------------------- */
 
 @close-font-weight: bold;
 @close-color: #000;
 @close-text-shadow: 0 1px 0 #fff;
 
-
 /* --------------------------------------------------------------
-* = 代码
-* ----------------------------------------------------------- */
+ * = 代码
+ * ----------------------------------------------------------- */
 
 @code-color: #c7254e;
 @code-bg: #f9f2f4;
@@ -819,30 +853,39 @@
 @pre-border-color: #ccc;
 @pre-scrollable-max-height: 340px;
 
-
 /* --------------------------------------------------------------
-* = 辅助元素
-* ----------------------------------------------------------- */
+ * = 辅助元素
+ * ----------------------------------------------------------- */
 
-//** Horizontal offset for forms and lists.
+// 表单和列表水平偏移
 @component-offset-horizontal: 180px;
-//** Text muted color
+
+// 柔和字体颜色
 @text-muted: @gray-light;
-//** Abbreviations and acronyms border color
+
+// 缩写和首字母边框颜色
 @abbr-border-color: @gray-light;
-//** Headings small color
+
+// 小号标题字体颜色
 @headings-small-color: @gray-light;
-//** Blockquote small color
+
+// 小号引用字体颜色
 @blockquote-small-color: @gray-light;
-//** Blockquote font size
+
+// 引用字体大小
 @blockquote-font-size: (@font-size-base * 1.25);
-//** Blockquote border color
+
+// 引用边框颜色
 @blockquote-border-color: @gray-lighter;
-//** Page header border color
+
+// 页面标题边框颜色
 @page-header-border-color: @gray-lighter;
-//** Width of horizontal description list titles
+
+// Width of horizontal description list titles
 @dl-horizontal-offset: @component-offset-horizontal;
-//** Point at which .dl-horizontal becomes horizontal
+
+// Point at which .dl-horizontal becomes horizontal
 @dl-horizontal-breakpoint: @grid-float-breakpoint;
-//** Horizontal line color.
+
+// 水平线颜色
 @hr-border: @gray-lighter;
