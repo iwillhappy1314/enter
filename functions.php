@@ -61,19 +61,6 @@ function enter_setup() {
 		'caption',
 	) );
 
-	/*
-	 * 添加文章格式支持
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
-
-
 	/**
      * 支持 WooCommerce
      */
