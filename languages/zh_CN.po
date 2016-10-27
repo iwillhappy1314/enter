@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2016-10-25 10:53+0800\n"
-"PO-Revision-Date: 2016-10-25 10:53+0800\n"
+"PO-Revision-Date: 2016-10-27 17:27+0800\n"
 "Last-Translator: Amos Lee <iwillhappy1314@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -41,7 +41,7 @@ msgstr "评论导航"
 
 #: comments.php:40 comments.php:62
 msgid "Older Comments"
-msgstr "&larr; 之前的评论"
+msgstr "&larr; 先前评论"
 
 #: comments.php:41 comments.php:63
 msgid "Newer Comments"
@@ -49,7 +49,7 @@ msgstr "更多评论 &rarr;"
 
 #: comments.php:76
 msgid "Comments are closed."
-msgstr "目前不开放注册"
+msgstr "注册功能已关闭。"
 
 #: comments.php:81
 msgid "Name"
@@ -89,7 +89,7 @@ msgstr "缩略图"
 
 #: inc/settings.php:8
 msgid "Theme Options"
-msgstr "主题选项"
+msgstr "选项"
 
 #: inc/settings.php:21
 msgid "Site Information"
