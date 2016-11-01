@@ -120,6 +120,7 @@
 @padding-small-vertical: 5px;
 @padding-small-horizontal: 10px;
 
+// 超小尺寸内间距
 @padding-xs-vertical: 1px;
 @padding-xs-horizontal: 5px;
 
@@ -127,7 +128,7 @@
 @line-height-large: 1.3333333;
 @line-height-small: 1.5;
 
-// 圆角的半径
+// 圆角半径
 @border-radius-base: 4px;
 @border-radius-large: 6px;
 @border-radius-small: 3px;
@@ -219,6 +220,7 @@
 
 // `<input>` 表单文本颜色
 @input-color: @gray;
+
 // `<input>` 表单边框颜色
 @input-border: #ccc;
 
@@ -273,7 +275,7 @@
 // 下拉的分隔线颜色
 @dropdown-divider-bg: #e5e5e5;
 
-// 下拉的链接颜色
+// 下拉的链接文字颜色
 @dropdown-link-color: @gray-dark;
 
 // 下拉的鼠标经过链接颜色
@@ -352,7 +354,7 @@
 // 栅格系统数量
 @grid-columns: 12;
 
-// 栅格系统的间距, 左右各一般
+// 栅格系统的间距, 左右各一半
 @grid-gutter-width: 30px;
 
 // 导航条折叠, 什么设备上不折叠
@@ -680,29 +682,31 @@
  * = 列表组
  * ----------------------------------------------------------- */
 
-// Background color on `.list-group-item`
+// `.list-group-item` 的背景颜色
 @list-group-bg: #fff;
-// `.list-group-item` border color
+// `.list-group-item` 的边框颜色
 @list-group-border: #ddd;
-// List group border radius
+// List group 的圆角半径
 @list-group-border-radius: @border-radius-base;
 
-// Background color of single list items on hover
+// 列表中单条项目鼠标经过时的背景颜色
 @list-group-hover-bg: #f5f5f5;
-// Text color of active list items
+// 当前列表项目的颜色
 @list-group-active-color: @component-active-color;
-// Background color of active list items
+// 当前列表项目的背景颜色
 @list-group-active-bg: @component-active-bg;
-// Border color of active list elements
+// 当前列表项目的边框颜色
 @list-group-active-border: @list-group-active-bg;
-// Text color for content within active list items
+// 当前列表项目的文字颜色
 @list-group-active-text-color: lighten(@list-group-active-bg, 40%);
 
-// Text color of disabled list items
+// 禁用项目的颜色
 @list-group-disabled-color: @gray-light;
-// Background color of disabled list items
+
+// 禁用项目的背景颜色
 @list-group-disabled-bg: @gray-lighter;
-// Text color for content within disabled list items
+
+// 禁用项目的文字颜色
 @list-group-disabled-text-color: @list-group-disabled-color;
 
 @list-group-link-color: #555;
@@ -719,7 +723,7 @@
 @panel-footer-padding: @panel-heading-padding;
 @panel-border-radius: @border-radius-base;
 
-// Border color for elements within panels
+// 面板内的元素的边框颜色
 @panel-inner-border: #ddd;
 @panel-footer-bg: #f5f5f5;
 
@@ -881,10 +885,10 @@
 // 页面标题边框颜色
 @page-header-border-color: @gray-lighter;
 
-// Width of horizontal description list titles
+// 水平描述列表标题的宽度
 @dl-horizontal-offset: @component-offset-horizontal;
 
-// Point at which .dl-horizontal becomes horizontal
+//** 水平列表 .dl-horizontal 变为水平时的端点
 @dl-horizontal-breakpoint: @grid-float-breakpoint;
 
 // 水平线颜色
