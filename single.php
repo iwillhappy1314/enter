@@ -12,8 +12,8 @@ get_header(); ?>
 	<header class="page-header">
 		<div class="container">
 			<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb('<p id="breadcrumbs" class="breadcrumbs">','</p>');
+			if ( function_exists( 'yoast_breadcrumb' ) ) {
+				yoast_breadcrumb( '<p id="breadcrumbs" class="breadcrumbs">', '</p>' );
 			}
 			?>
 			<?php
@@ -23,32 +23,26 @@ get_header(); ?>
 		</div>
 	</header>
 
-	<div class="container">
-		<div class="pure-g row">
+	<div id="primary" class="col-sm-12 col-md-9 content-area">
+		<main id="main" class="site-main" role="main">
 
-			<div id="primary" class="pure-u-1 pure-u-md-3-4 content-area">
-				<main id="main" class="col site-main" role="main">
+			<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'wizhi/content', get_post_format() ); ?>
 
-						<?php get_template_part( 'wizhi/content', get_post_format() ); ?>
+				<?php the_post_navigation(); ?>
 
-						<?php the_post_navigation(); ?>
+				<?php
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+				?>
 
-						<?php 
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
-						?>
+			<?php endwhile; ?>
 
-					<?php endwhile; ?>
+		</main>
+	</div><!-- #primary -->
 
-				</main>
-			</div><!-- #primary -->
-
-			<?php get_sidebar(); ?>
-
-		</div>
-	</div>
+	<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

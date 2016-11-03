@@ -15,24 +15,18 @@ get_header(); ?>
 		</div>
 	</header>
 
-	<div class="container">
-		<div class="pure-g row">
+	<div id="primary" class="col-sm-12 col-md-9 content-area">
+		<main id="main" class="site-main" role="main">
 
-			<div id="primary" class="pure-u-1 pure-u-md-3-4 content-area">
-				<main id="main" class="col site-main" role="main">
+			<section class="error-404 not-found">
 
-					<section class="error-404 not-found">
+				<div class="page-content">
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'enter' ); ?></p>
+				</div>
 
-						<div class="page-content">
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'enter' ); ?></p>
-						</div>
+			</section>
 
-					</section>
-
-				</main>
-			</div>
-
-		</div>
+		</main>
 	</div>
 
 <?php get_footer(); ?>

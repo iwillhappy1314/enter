@@ -9,8 +9,8 @@ get_header(); ?>
 	<header class="page-header">
 		<div class="container">
 			<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb('<p id="breadcrumbs" class="breadcrumbs">','</p>');
+			if ( function_exists( 'yoast_breadcrumb' ) ) {
+				yoast_breadcrumb( '<p id="breadcrumbs" class="breadcrumbs">', '</p>' );
 			}
 			?>
 			<?php
@@ -20,34 +20,29 @@ get_header(); ?>
 		</div>
 	</header>
 
-	<div class="container">
-		<div class="pure-g row">
 
-			<div id="primary" class="pure-u-1">
-				<main id="main" class="col site-main" role="main">
+	<div id="primary" class="col-md-12">
+		<main id="main" class="site-main" role="main">
 
-					<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) : ?>
 
-						<?php while ( have_posts() ) : the_post(); ?>
-							<?php get_template_part( 'wizhi/content', 'list' ); ?>
-						<?php endwhile; ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'wizhi/content', 'list' ); ?>
+				<?php endwhile; ?>
 
-						<?php
-						if ( function_exists( 'wizhi_bootstrap_pagination' ) ):
-							wizhi_bootstrap_pagination();
-						endif;
-						?>
+				<?php
+				if ( function_exists( 'wizhi_bootstrap_pagination' ) ):
+					wizhi_bootstrap_pagination();
+				endif;
+				?>
 
-					<?php else : ?>
+			<?php else : ?>
 
-						<?php get_template_part( 'wizhi/content', 'none' ); ?>
+				<?php get_template_part( 'wizhi/content', 'none' ); ?>
 
-					<?php endif; ?>
+			<?php endif; ?>
 
-				</main>
-			</div>
-
-		</div>
+		</main>
 	</div>
 
 <?php get_footer(); ?>

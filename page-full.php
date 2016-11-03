@@ -31,8 +31,8 @@ get_header(); ?>
 	<div class="container">
 		<div class="pure-g row">
 
-			<div id="primary" class="pure-u-1">
-				<main id="main" class="col site-main" role="main">
+			<div id="primary" class="col-md-12">
+				<main id="main" class="site-main" role="main">
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
