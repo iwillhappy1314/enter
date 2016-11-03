@@ -38,7 +38,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<div class="wrap">
+		<div class="container">
 			<div class="pure-g row">
 				<div class="pure-u-1 pure-u-md-1-4">
 					<div class="col">

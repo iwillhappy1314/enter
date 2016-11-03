@@ -11,7 +11,7 @@ get_header(); ?>
 	<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/front/dist/scripts/imagesloaded.js"></script>
 
 	<header class="page-header">
-		<div class="wrap">
+		<div class="container">
 			<?php
 			if ( function_exists('yoast_breadcrumb') ) {
 				yoast_breadcrumb('<p id="breadcrumbs" class="breadcrumbs">','</p>');
@@ -24,7 +24,7 @@ get_header(); ?>
 		</div>
 	</header>
 
-	<div class="wrap">
+	<div class="container">
 		<div class="pure-g row">
 
 			<div id="primary" class="pure-u-1">

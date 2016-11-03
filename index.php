@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<div class="wrap">
+<div class="container">
 	<div class="pure-g row">
 
 		<div id="primary" class="pure-u-1 pure-u-md-3-4 content-area">

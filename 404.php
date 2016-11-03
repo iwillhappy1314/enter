@@ -10,12 +10,12 @@
 get_header(); ?>
 
 	<header class="page-header">
-		<div class="wrap">
+		<div class="container">
 			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'enter' ); ?></h1>
 		</div>
 	</header>
 
-	<div class="wrap">
+	<div class="container">
 		<div class="pure-g row">
 
 			<div id="primary" class="pure-u-1 pure-u-md-3-4 content-area">

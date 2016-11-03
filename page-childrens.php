@@ -15,7 +15,7 @@
 get_header(); ?>
 
 	<header class="page-header">
-		<div class="wrap">
+		<div class="container">
 			<?php
 			if ( function_exists('yoast_breadcrumb') ) {
 				yoast_breadcrumb('<p id="breadcrumbs" class="breadcrumbs">','</p>');
@@ -39,14 +39,14 @@ get_header(); ?>
 	if ( $children ) {
 		?>
 		<div class="page-subtitle">
-			<div class="wrap">
+			<div class="container">
 				<ul><?php echo $children; ?></ul>
 			</div>
 		</div>
 
 	<?php } ?>
 
-	<div class="wrap">
+	<div class="container">
 		<div class="pure-g row">
 
 			<div id="primary" class="pure-u-1">
