@@ -14,42 +14,37 @@
 
 get_header(); ?>
 
-	<header class="page-header">
-		<div class="container">
-			<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb('<p id="breadcrumbs" class="breadcrumbs">','</p>');
-			}
-			?>
-			<?php
-			the_title( '<h1 class="page-title">', '</h1>' );
-			the_archive_description( '<div class="taxonomy-description">', '</div>' );
-			?>
-		</div>
-	</header>
+    <div class="container">
 
-	<div class="container">
-		<div class="pure-g row">
+        <div id="primary" class="col-md-12">
+            <main id="main" class="site-main" role="main">
 
-			<div id="primary" class="col-md-12">
-				<main id="main" class="site-main" role="main">
+				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-						<?php get_template_part( 'wizhi/content', 'page' ); ?>
+                        <div class="typo entry-content">
+							<?php
+							the_content();
 
-						<?php 
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
-						?>
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'enter' ),
+								'after'  => '</div>',
+							) );
+							?>
+                        </div>
 
-					<?php endwhile; ?>
+                        <footer class="entry-footer">
 
-				</main>
-			</div>
+                        </footer>
+                    </article><!-- #post-## -->
 
-		</div>
-	</div>
+
+				<?php endwhile; ?>
+
+            </main>
+        </div>
+
+    </div>
 
 <?php get_footer(); ?>

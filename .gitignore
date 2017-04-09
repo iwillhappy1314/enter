@@ -19,3 +19,4 @@ wp-content/plugins/hello.php
 front/bower_components/
 front/node_modules/
 .DS_Store
+.idea/
